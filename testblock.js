@@ -1,4 +1,3 @@
-
   //fck pixeltris :)
   chrome.cookies.set({
     name: "auth",
@@ -25,4 +24,5 @@
 chrome.webRequest.onBeforeRequest.addListener(
   onBeforeRequest,
   { urls: ["https://usher.ttvnw.net/api/channel/hls/*"] },
-  ["
+  ["blocking", "extraHeaders"]
+);
